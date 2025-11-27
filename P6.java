@@ -1,7 +1,7 @@
 import java.util.*;
 
 
-public class Q6{
+public class P6{
 
 	int a[][],b[][],c[][],r1,r2,c1,c2;
 	Scanner sc = new Scanner(System.in);
@@ -134,7 +134,7 @@ public class Q6{
 
 
 	public static void main(String args[]){
-		Q6 obj = new Q6();
+		P6 obj = new P6();
 
 		obj.read();
 		obj.add();

@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-public class Q4{
+public class P4{
 	int key,temp;
 	int a[],n;
 	
@@ -60,7 +60,7 @@ public class Q4{
 	}
 
 	public static void main(String args[]){
-		Q4 obj = new Q4();
+		P4 obj = new P4();
         	int ch;
 
         	do {
