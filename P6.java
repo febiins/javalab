@@ -89,7 +89,7 @@ public class P6{
 			System.out.println("Multiplication is not possible");
 
 		}else{
-
+			c = new int[r1][c2];
 			for(int i=0;i<r1;i++){
 				for(int j=0;j<c2;j++){
 
@@ -137,7 +137,11 @@ public class P6{
 		P6 obj = new P6();
 
 		obj.read();
-		obj.add();
+
+		try{
+			obj.add();
+		}catch(Exception e){}
+		
 		obj.choice();
 		
 	}
