@@ -1,37 +1,36 @@
+import java.io.*;
 import java.util.*;
-
-public class P5{
-
-void display(int[] a){
-
-	for(int i=0;i<a.length;i++){
-		System.out.print(a[i]+"\t");
-	}
+class c1
+{
+    public int[] read(int a[]){
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the no. of elements:");
+        int n=s.nextInt();
+        a=new int[n];
+        System.out.println("Enter the elements:");
+        for(int i=0;i<n;i++)
+        {
+            a[i]=s.nextInt();
+        }
+        return a;
+    }
+    public void disp(int a[]){
+        System.out.println("The elements are:");
+        for(int i=0;i<a.length;i++)
+        {
+            System.out.print(a[i]+"\t");
+        }
+        System.out.println("");
+    }
 }
 
-int [] array(){
-	int n;
-	int [] a;
-	System.out.println("Enter the size of array");
-	Scanner sc = new Scanner(System.in);
-	n=sc.nextInt();
-	a=new int[n]; 
-	for(int i=0;i<n;i++){
-		a[i]=sc.nextInt();
-	}
-	return a;
-}
-
-
-public static void main(String args[]){
-		int[] a={1,2,3,4};
-		P5 obj = new P5();
-		obj.display(a);
-		System.out.println("");
-		int []arr=obj.array();
-		for(int x : arr){
-			System.out.print(x+"\t");
-		}
-		
-	}
+public class P5
+{
+    public static void main(String args[])
+    {
+        c1 obj=new c1();
+        int a[]=null;
+        a=obj.read(a);
+        obj.disp(a);
+    }
 }

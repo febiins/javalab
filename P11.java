@@ -2,7 +2,7 @@ import java.util.*;
 
 class Operation{
 
-	int a,b,sum;
+	int a,b,res;
 	Scanner sc = new Scanner(System.in);
 	
 	public void read(){
@@ -18,7 +18,7 @@ class Operation{
 		s=new Operation();
 		s.a=this.a;
 		s.b=this.b;
-		s.sum=s.a+s.b;
+		s.res=s.a+s.b;
 		return s;
 		
 	
@@ -30,7 +30,7 @@ class Operation{
 		s= new Operation();
 		s.a=this.a;
 		s.b=this.b;
-		s.sum=s.b-s.a;
+		s.res=s.b-s.a;
 		return s;
 
 	}
@@ -41,7 +41,7 @@ class Operation{
 		s=new Operation();
 		s.a=this.a;
 		s.b=this.b;
-		s.sum=s.a * s.b;
+		s.res=s.a * s.b;
 		return s;
 	}
 
@@ -51,14 +51,14 @@ class Operation{
 		s=new Operation();
 		s.a=this.a;
 		s.b=this.b;
-		s.sum=s.a/s.b;
+		s.res=s.a/s.b;
 		return s;
 	}
 
 
 	public void disp(){
 
-		System.out.print(sum);
+		System.out.print(res);
 	}
 
 	
