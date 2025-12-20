@@ -49,6 +49,7 @@ class PCreation{
 			 if (!hasUpper || !hasLower || !hasDigit || !hasSpecial) {
                 		throw new Password("Password must contain uppercase, lowercase, digit and special character");
             		}
+			 System.out.println("Password is valid");
 	
 		}catch(Password e){
 		System.out.println("Error :"+ e.show());

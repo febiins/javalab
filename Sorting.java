@@ -1,45 +1,49 @@
 import java.util.*;
 
-class SortingMethods{
+class SortingMethods {
 
-	public int bubblesort(int[] a){
-		int count=0,temp;
-		for(int i=0;i<a.length-1;i++){
-			for(int j=0;j<a.length-i-1;j++){
-				count++;
-				if(a[j]>a[j+1]){
-					temp = a[j];
-					a[j]=a[j+1];
-					a[j+1]=temp;	
-				}
-			}		
-		}
-		return count;
-	}
-	public int insertionsort(int[] a) {
-        int count = 0;
+    // ---------- Bubble Sort ----------
+    public int[] bubblesort(int[] a) {
+        int outer = 0, inner = 0, temp;
+        for (int i = 0; i < a.length - 1; i++) {
+            outer++;
+            for (int j = 0; j < a.length - i - 1; j++) {
+                inner++;
+                if (a[j] > a[j + 1]) {
+                    temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+            }
+        }
+        return new int[]{outer, inner};
+    }
+
+    // ---------- Insertion Sort ----------
+    public int[] insertionsort(int[] a) {
+        int outer = 0, inner = 0;
         for (int i = 1; i < a.length; i++) {
+            outer++;
             int key = a[i];
             int j = i - 1;
-            while (j >= 0) {
-                count++; 
-                if (a[j] > key) {
-                    a[j + 1] = a[j];
-                    j--;
-                } else {
-                    break;
-                }
+            while (j >= 0 && a[j] > key) {
+                inner++;
+                a[j + 1] = a[j];
+                j--;
             }
             a[j + 1] = key;
         }
-        return count;
+        return new int[]{outer, inner};
     }
-    public int selectionsort(int[] a) {
-        int count = 0;
+
+    // ---------- Selection Sort ----------
+    public int[] selectionsort(int[] a) {
+        int outer = 0, inner = 0;
         for (int i = 0; i < a.length - 1; i++) {
+            outer++;
             int min = i;
             for (int j = i + 1; j < a.length; j++) {
-                count++; // comparison counted
+                inner++;
                 if (a[j] < a[min]) {
                     min = j;
                 }
@@ -48,37 +52,36 @@ class SortingMethods{
             a[min] = a[i];
             a[i] = temp;
         }
-        return count;
+        return new int[]{outer, inner};
     }
 }
 
+public class Sorting {
+    public static void main(String args[]) {
 
+        int[] best = {1, 2, 3, 4, 5};
+        int[] avg = {5, 2, 4, 1, 3};
+        int[] worst = {5, 4, 3, 2, 1};
 
+        SortingMethods obj = new SortingMethods();
 
+        System.out.println("BUBBLE SORT");
+        display(obj.bubblesort(best.clone()), "Best");
+        display(obj.bubblesort(avg.clone()), "Average");
+        display(obj.bubblesort(worst.clone()), "Worst");
 
-public class Sorting{
-	public static void main(String args[]){
-		int[] best = {1, 2, 3, 4, 5};
-        	int[] avg = {5, 2, 4, 1, 3};
-        	int[] worst = {5, 4, 3, 2, 1};
-		SortingMethods obj = new SortingMethods();
-		System.out.println("Bubble Sort");
-		System.out.println("-------------------------");
-		System.out.println("Best case:"+obj.bubblesort(best.clone()));
-		System.out.println("Average case:"+obj.bubblesort(avg.clone()));
-		System.out.println("Worst case:"+obj.bubblesort(worst.clone()));
-		System.out.println("-------------------------");
-		System.out.println("Insertion Sort");
-		System.out.println("-------------------------");
-		System.out.println("Best case:"+obj.insertionsort(best.clone()));
-		System.out.println("Average case:"+obj.insertionsort(avg.clone()));
-		System.out.println("Worst case:"+obj.insertionsort(worst.clone()));
-		System.out.println("-------------------------");
-		System.out.println("Selection Sort");
-		System.out.println("-------------------------");
-		System.out.println("Best case:"+obj.selectionsort(best.clone()));
-		System.out.println("Average case:"+obj.selectionsort(avg.clone()));
-		System.out.println("Worst case:"+obj.selectionsort(worst.clone()));
-		System.out.println("-------------------------");
-	}
+        System.out.println("\nINSERTION SORT");
+        display(obj.insertionsort(best.clone()), "Best");
+        display(obj.insertionsort(avg.clone()), "Average");
+        display(obj.insertionsort(worst.clone()), "Worst");
+
+        System.out.println("\nSELECTION SORT");
+        display(obj.selectionsort(best.clone()), "Best");
+        display(obj.selectionsort(avg.clone()), "Average");
+        display(obj.selectionsort(worst.clone()), "Worst");
+    }
+
+    static void display(int[] c, String type) {
+        System.out.println(type + " Case -> Outer Loop: " + c[0] + ", Inner Loop: " + c[1]);
+    }
 }
