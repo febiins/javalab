@@ -2,12 +2,12 @@
 Write a Java program to create threads using the Runnable interface.
 @Febin Sunny
  Roll No: 27
- 17-11-2025
+ 18-12-2025
 */
 
 class NewThread implements Runnable{
     public void run(){
-        for(int i=0;i<=10;i++){
+        for(int i=0;i<=5;i++){
             System.out.println(i);
         }
     }
