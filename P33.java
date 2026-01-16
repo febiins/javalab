@@ -12,7 +12,7 @@ class Account{
     }
     public void withdraw(int amount){
         if(amount>currentbalance){
-            System.out.println("In sufficient balance your account have");
+            System.out.println("Insufficient balance your account have");
         }else{
             currentbalance-=amount;
             total=currentbalance;
