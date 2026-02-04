@@ -8,10 +8,10 @@ public class RecursionFilePrinting {
         for(int i=0;i<file.length;i++){
             File f = file[i];
             if(f.isDirectory()){
-                System.out.println("Directory: " + f.getAbsolutePath());
+                System.out.println("Directory: " + f.getName());
                 printFile(f);
             }else{
-                System.out.println("File: " + f.getAbsolutePath());
+                System.out.println("File: " + f.getName());
             }
         }
     }

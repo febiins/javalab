@@ -28,10 +28,10 @@ class PCreation{
 	String passw;
 	Scanner sc = new Scanner(System.in);
 	public void readvalidate(){
-		 boolean hasUpper = false;
-           	 boolean hasLower = false;
-            	 boolean hasDigit = false;
-           	 boolean hasSpecial = false;
+		boolean hasUpper = false;
+        boolean hasLower = false;
+        boolean hasDigit = false;
+        boolean hasSpecial = false;
 		System.out.println("Enter your password");
 		try{
 			passw=sc.nextLine();
