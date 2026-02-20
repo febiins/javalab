@@ -1,0 +1,4 @@
+docker start oracle-xe
+docker ps
+docker exec -it oracle-xe sqlplus febin/febin@XEPDB1
+docker stop oracle-xe
