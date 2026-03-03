@@ -1,7 +1,7 @@
 import java.io.*;
 import java.net.*;
 
-public class UDPC{
+public class P45{
 
 	public static void main(String[] args){
 
@@ -12,7 +12,7 @@ public class UDPC{
 			ds = new DatagramSocket();
 			byte [] m= "bye".getBytes();
 
-			shost = InetAddress.getByName("192.168.18.93");
+			shost = InetAddress.getByName("localhost");
 			dp = new DatagramPacket(m,3,shost,1234);
 			ds.send(dp);
 			byte[] buffer = new byte[1000];
