@@ -19,7 +19,7 @@ public class UDPS {
                     (new String(dp.getData())).trim());
 
             System.out.println("Client port: " + dp.getPort());
-	    String meg = "hi";
+	        String meg = "hi";
             reply = new DatagramPacket(meg.getBytes(),meg.length(),dp.getAddress(),dp.getPort());
 
             ds.send(reply);

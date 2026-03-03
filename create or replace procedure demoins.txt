@@ -1,0 +1,6 @@
+create or replace procedure demoinsert(id in int ,name in varchar2,amt in int)
+   as
+    begin
+       insert into demo values(id,name,amt);
+    end;
+    /

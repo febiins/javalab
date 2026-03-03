@@ -1,3 +1,4 @@
 *.class
 output.txt
 docker start oracle-xe.txt
+.jar
