@@ -1,7 +1,7 @@
 import java.util.*;
 import java.sql.*;
 
-public class DBP {
+public class P49 {
     public static void main(String[] args) {
         try {
             //Class.forName("oracle.jdbc.driver.OracleDriver");
