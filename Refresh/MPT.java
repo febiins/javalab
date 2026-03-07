@@ -1,5 +1,8 @@
 import java.util.*;
 
+import record.Person;
+import record.Teacher;
+
 
 class Person{
 
