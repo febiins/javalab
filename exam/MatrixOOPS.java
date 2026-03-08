@@ -1,4 +1,6 @@
 package exam;
+//pure oops only if asked.
+
 import java.util.*;
 
 class Matrix {

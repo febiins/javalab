@@ -3,6 +3,7 @@ package exam;
 //IS-A
 //calling constructors using super keyword
 //prevention of method overriding using super keyword
+//Q: perform inheritance using package. please try out if any doubts please ask.
 
 class Student{
     String name;

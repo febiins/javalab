@@ -1,4 +1,6 @@
 package exam;
+//CAE1 question. Application question. Demonstrating runtime and array of objects.
+
 import java.util.*;
 interface Details{
     public void read();

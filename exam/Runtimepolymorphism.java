@@ -1,4 +1,9 @@
 package exam;
+//implementing runtime polymorphishm using interfaces.
+//compile and run three time.
+//first time commenting the second memory allocation
+//second time commenting the first memory allocation
+//third run without commenting 
 
 interface Animal{
     public void show();
