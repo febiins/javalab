@@ -1,0 +1,1 @@
+hi this is sample input to demonstrate the fileinput and output stream
